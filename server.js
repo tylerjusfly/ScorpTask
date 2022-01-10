@@ -2,7 +2,7 @@ const express = require('express')
 
 
 const app = express();
-var port = process.env.DB_PORT || '3000';
+var port = process.env.PORT || '3000';
 // app.set('port', port);
 
 const indexRouter = require('./routes/index');
