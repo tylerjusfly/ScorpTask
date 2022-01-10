@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize')
+require('dotenv').config()
 
 
 // Creating connection
-const sequelize = new Sequelize('scorpdb', 'momoh', 'tylerjusfly', {
-  host : 'localhost',
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
+  host : process.env.HOST_NAME,
   dialect : 'mysql',
   logging : false,
   pool : {
